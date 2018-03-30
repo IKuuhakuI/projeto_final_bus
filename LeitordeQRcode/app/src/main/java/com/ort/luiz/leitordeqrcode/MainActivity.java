@@ -18,11 +18,15 @@ public class MainActivity extends AppCompatActivity {
 
     Button btnScan;
 
+    FirebaseDatabase database;
+    DatabaseReference myRef;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        database = FirebaseDatabase.getInstance();
 
         btnScan =(Button) findViewById(R.id.btnScan);
 
@@ -48,10 +52,8 @@ public class MainActivity extends AppCompatActivity {
 
         if(result != null){
             if(result.getContents() != null){
-                FirebaseDatabase database = FirebaseDatabase.getInstance();
-                DatabaseReference myRef = database.getReference("Ônibus 1");
-
-                myRef.setValue(result.getContents());
+                myRef = database.getReference("Onibus1");
+                myRef.child("Rota").child(result.getContents()).child("Position").setValue(1);
             } else{
                 alert("Scan cancelado");
             }
