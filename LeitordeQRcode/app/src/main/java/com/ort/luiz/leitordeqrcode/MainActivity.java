@@ -15,8 +15,9 @@ import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
 public class MainActivity extends AppCompatActivity {
-
     Button btnScan;
+    private String onibus1;
+    private String onibus2;
 
     FirebaseDatabase database;
     DatabaseReference myRef;
@@ -51,7 +52,14 @@ public class MainActivity extends AppCompatActivity {
         if(result != null){
             if(result.getContents() != null){
                 myRef = database.getReference("Onibus1");
+                myRef.child("QR").setValue(result.getContents());
                 myRef.child("Rota").child(result.getContents()).child("Position").setValue(1);
+
+                if(onibus1 != null){
+                    myRef.child("Rota").child(onibus1).child("Position").setValue(0);
+                }
+
+                onibus1 = result.getContents();
             } else{
                 alert("Scan cancelado");
             }

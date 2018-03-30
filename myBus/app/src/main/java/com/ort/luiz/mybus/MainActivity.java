@@ -11,7 +11,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
-
     FirebaseDatabase database;
     DatabaseReference myRef;
     @Override
@@ -26,7 +25,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 TextView textView = findViewById(R.id.textID);
-                textView.setText(dataSnapshot.getValue().toString());
+                int value = Integer.parseInt(dataSnapshot.getValue().toString());
+
+                if(value == 1){
+                    textView.setText("Chegou");
+                } else{
+                    textView.setText("Saiu");
+                }
             }
 
             @Override
