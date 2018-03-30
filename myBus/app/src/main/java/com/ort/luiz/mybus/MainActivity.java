@@ -20,15 +20,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         database = FirebaseDatabase.getInstance();
-        myRef = database.getReference("Teste");
+        myRef = database.getReference("Onibus1");
 
-        myRef.addValueEventListener(new ValueEventListener() {
+        myRef.child("Rota").child("A").child("Position").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                String value = dataSnapshot.getValue(String.class);
-                TextView textView =  findViewById(R.id.textID);
-
-                textView.setText(value);
+                TextView textView = findViewById(R.id.textID);
+                textView.setText(dataSnapshot.getValue().toString());
             }
 
             @Override
