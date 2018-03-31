@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
         database = FirebaseDatabase.getInstance();
 
-        btnScan =(Button) findViewById(R.id.btnScan);
+        btnScan = findViewById(R.id.btnScan);
 
         final Activity activity = this;
 

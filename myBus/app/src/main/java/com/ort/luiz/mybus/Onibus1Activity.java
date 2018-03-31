@@ -1,7 +1,6 @@
 package com.ort.luiz.mybus;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -13,7 +12,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import android.app.Activity;
 
-public class MainActivity extends Activity {
+public class Onibus1Activity extends Activity {
     FirebaseDatabase database;
     DatabaseReference myRef;
     Button btnVoltar;
@@ -46,7 +45,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_onibus1);
 
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference("Onibus1");
