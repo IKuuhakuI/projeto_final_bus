@@ -14,7 +14,7 @@ import android.app.Activity;
 
 public class Onibus1Activity extends Activity {
     FirebaseDatabase database;
-    DatabaseReference myRef;
+    DatabaseReference onibus1Ref;
     Button btnVoltar;
 
     @Override
@@ -48,7 +48,7 @@ public class Onibus1Activity extends Activity {
         setContentView(R.layout.activity_onibus1);
 
         database = FirebaseDatabase.getInstance();
-        myRef = database.getReference("Onibus1");
+        onibus1Ref = database.getReference("Onibus1");
 
         //Botao voltar
         btnVoltar = findViewById(R.id.btnVoltarID);
@@ -58,17 +58,12 @@ public class Onibus1Activity extends Activity {
         });
 
         //Le do banco de dados
-        myRef.child("Rota").child("A").child("Position").addValueEventListener(new ValueEventListener() {
+        onibus1Ref.child("QR").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 TextView textView = findViewById(R.id.textID);
-                int value = Integer.parseInt(dataSnapshot.getValue().toString());
 
-                if(value == 1){
-                    textView.setText("Chegou");
-                } else{
-                    textView.setText("Saiu");
-                }
+                textView.setText("Ponto atual: " + dataSnapshot.getValue().toString());
             }
 
             @Override

@@ -12,8 +12,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
-        android:text="Página Inicial"
+        android:layout_marginTop="18dp"
+        android:text="Selecione o Ônibus:"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,11 +38,11 @@
 
     <Spinner
         android:id="@+id/onibusID"
-        android:layout_width="269dp"
+        android:layout_width="225dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp" />
+        android:layout_marginTop="58dp" />
 
 </RelativeLayout>
 
