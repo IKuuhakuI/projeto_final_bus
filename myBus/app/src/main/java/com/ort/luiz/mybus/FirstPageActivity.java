@@ -72,6 +72,8 @@ public class FirstPageActivity extends Activity {
         btnRastrear.setOnClickListener((View V) ->{
             if(onibusSelected == "Onibus1") {
                 startActivity(new Intent(this, Onibus1Activity.class));
+            } else if(onibusSelected == "Onibus2"){
+                startActivity(new Intent(this, Onibus2Activity.class));
             }
         });
     }

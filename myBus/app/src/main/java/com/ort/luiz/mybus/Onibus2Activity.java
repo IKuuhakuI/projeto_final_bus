@@ -12,9 +12,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import android.app.Activity;
 
-public class Onibus1Activity extends Activity {
+public class Onibus2Activity extends Activity {
     FirebaseDatabase database;
-    DatabaseReference onibus1Ref;
+    DatabaseReference onibus2Ref;
     Button btnVoltar;
 
     @Override
@@ -48,7 +48,7 @@ public class Onibus1Activity extends Activity {
         setContentView(R.layout.activity_onibus1);
 
         database = FirebaseDatabase.getInstance();
-        onibus1Ref = database.getReference("Onibus1");
+        onibus2Ref = database.getReference("Onibus2");
 
         //Botao voltar
         btnVoltar = findViewById(R.id.btnVoltarID);
@@ -58,19 +58,19 @@ public class Onibus1Activity extends Activity {
         });
 
 //Le do banco de dados
-        onibus1Ref.child("QR").addValueEventListener(new ValueEventListener() {
-@Override
-public void onDataChange(DataSnapshot dataSnapshot) {
-        TextView textView = findViewById(R.id.textID);
+        onibus2Ref.child("QR").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                TextView textView = findViewById(R.id.textID);
 
-        textView.setText("Ponto atual: " + dataSnapshot.getValue().toString());
-        }
+                textView.setText("Ponto atual: " + dataSnapshot.getValue().toString());
+            }
 
-@Override
-public void onCancelled(DatabaseError databaseError) {
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
 
-        }
+            }
         });
-        }
-        }
+    }
+}
 
