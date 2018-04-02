@@ -69,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
         if(result != null){
             if(result.getContents() != null) {
                 onibus2Ref.child("QR").setValue(result.getContents());
-                onibus2 = result.getContents();
             } else{
                 alert("Scan cancelado");
             }

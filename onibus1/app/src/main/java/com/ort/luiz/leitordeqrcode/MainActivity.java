@@ -16,6 +16,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import static java.lang.String.valueOf;
 
@@ -25,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
 
     FirebaseDatabase database;
     DatabaseReference onibus1Ref;
+    SimpleDateFormat formatData;
+    Date hora;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,13 +36,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         database = FirebaseDatabase.getInstance();
-
         btnScan = findViewById(R.id.btnScan);
 
         final Activity activity = this;
 
+        //Cria referencia para o onibus1
         onibus1Ref = database.getReference("Onibus1");
 
+        //Le do banco de dados
         onibus1Ref.child("QR").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -69,8 +74,13 @@ public class MainActivity extends AppCompatActivity {
         if(result != null){
             if(result.getContents() != null) {
                 onibus1Ref.child("QR").setValue(result.getContents());
-                onibus1 = result.getContents();
 
+                formatData = new SimpleDateFormat("HH:mm");
+                hora = new Date();
+
+                String dataFormatada = formatData.format(hora);
+                onibus1Ref.child("Hora").setValue(dataFormatada);
+                alert(dataFormatada);
             } else{
                 alert("Scan cancelado");
             }
