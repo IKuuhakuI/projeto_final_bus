@@ -21,7 +21,6 @@ import static java.lang.String.valueOf;
 
 public class MainActivity extends AppCompatActivity {
     Button btnScan;
-    private String onibus2;
     private String qr;
 
     FirebaseDatabase database;
@@ -62,8 +61,6 @@ public class MainActivity extends AppCompatActivity {
                 integrator.initiateScan();
             }
         });
-
-        alert(onibus2);
     }
 
     @Override
@@ -72,14 +69,7 @@ public class MainActivity extends AppCompatActivity {
         if(result != null){
             if(result.getContents() != null) {
                 onibus2Ref.child("QR").setValue(result.getContents());
-                if (onibus2 != null){
-                    onibus2Ref.child("Rota").child(onibus2).child("Position").setValue(0);
-                } else{
-                    onibus2Ref.child("Rota").child(qr).child("Position").setValue(0);
-                }
-                onibus2Ref.child("Rota").child(result.getContents()).child("Position").setValue(1);
                 onibus2 = result.getContents();
-
             } else{
                 alert("Scan cancelado");
             }
