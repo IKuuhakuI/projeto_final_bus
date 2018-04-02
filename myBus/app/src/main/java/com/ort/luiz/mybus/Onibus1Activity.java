@@ -57,20 +57,21 @@ public class Onibus1Activity extends Activity {
             startActivity(new Intent(this, FirstPageActivity.class));
         });
 
-//Le do banco de dados
+        //Le o QR banco de dados
         onibus1Ref.child("QR").addValueEventListener(new ValueEventListener() {
-@Override
-public void onDataChange(DataSnapshot dataSnapshot) {
-        TextView textView = findViewById(R.id.textID);
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                TextView textView = findViewById(R.id.textID);
+                String valor = dataSnapshot.child("Valor").getValue().toString();
+                String hora = dataSnapshot.child("Hora").getValue().toString();
 
-        textView.setText("Ponto atual: " + dataSnapshot.getValue().toString());
-        }
+                textView.setText("Ponto atual: " + valor + " Hora: " + hora);
+            }
 
-@Override
-public void onCancelled(DatabaseError databaseError) {
-
-        }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+            }
         });
-        }
-        }
+    }
+}
 

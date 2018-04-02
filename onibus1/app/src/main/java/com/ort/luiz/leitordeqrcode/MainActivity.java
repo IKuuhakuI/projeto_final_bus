@@ -73,14 +73,13 @@ public class MainActivity extends AppCompatActivity {
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode,resultCode,data);
         if(result != null){
             if(result.getContents() != null) {
-                onibus1Ref.child("QR").setValue(result.getContents());
+                onibus1Ref.child("QR").child("Valor").setValue(result.getContents());
 
                 formatData = new SimpleDateFormat("HH:mm");
                 hora = new Date();
 
                 String dataFormatada = formatData.format(hora);
-                onibus1Ref.child("Hora").setValue(dataFormatada);
-                alert(dataFormatada);
+                onibus1Ref.child("QR").child("Hora").setValue(dataFormatada);
             } else{
                 alert("Scan cancelado");
             }

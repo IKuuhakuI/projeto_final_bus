@@ -62,8 +62,10 @@ public class Onibus2Activity extends Activity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 TextView textView = findViewById(R.id.textID);
+                String valor = dataSnapshot.child("Valor").getValue().toString();
+                String hora = dataSnapshot.child("Hora").getValue().toString();
 
-                textView.setText("Ponto atual: " + dataSnapshot.getValue().toString());
+                textView.setText("Ponto atual: " + valor + " Hora: " + hora);
             }
 
             @Override

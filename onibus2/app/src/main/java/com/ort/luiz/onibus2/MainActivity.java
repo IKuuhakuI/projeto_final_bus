@@ -17,11 +17,16 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import static java.lang.String.valueOf;
 
 public class MainActivity extends AppCompatActivity {
     Button btnScan;
     private String qr;
+    SimpleDateFormat formatData;
+    Date hora;
 
     FirebaseDatabase database;
     DatabaseReference onibus2Ref;
@@ -68,7 +73,13 @@ public class MainActivity extends AppCompatActivity {
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode,resultCode,data);
         if(result != null){
             if(result.getContents() != null) {
-                onibus2Ref.child("QR").setValue(result.getContents());
+                onibus2Ref.child("QR").child("Valor").setValue(result.getContents());
+
+                formatData = new SimpleDateFormat("HH:mm");
+                hora = new Date();
+
+                String dataFormatada = formatData.format(hora);
+                onibus2Ref.child("QR").child("Hora").setValue(dataFormatada);
             } else{
                 alert("Scan cancelado");
             }
