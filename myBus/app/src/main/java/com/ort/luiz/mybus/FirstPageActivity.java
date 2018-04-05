@@ -1,7 +1,9 @@
 package com.ort.luiz.mybus;
 
 import android.accessibilityservice.GestureDescription;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.View;
@@ -53,28 +55,48 @@ public class FirstPageActivity extends Activity {
         arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, onibusValues);
         onibus.setAdapter(arrayAdapter);
 
+        alert(String.valueOf(verificaConexao()));
+
         //Le o item selecionado no menu
         onibus.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
-                Toast.makeText(getApplicationContext(),"Your selection is: " + onibusValues[i], Toast.LENGTH_SHORT).show();
+                alert("Your selection is: " + onibusValues[i]);
                 onibusSelected = onibusValues[i];
             }
-
             @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
+            public void onNothingSelected(AdapterView<?> parent) { }
         });
 
         //Botao para rastrear o ônibus
         btnRastrear = findViewById(R.id.btnRastrearID);
         btnRastrear.setOnClickListener((View V) ->{
-            if(onibusSelected == "Onibus1") {
-                startActivity(new Intent(this, Onibus1Activity.class));
-            } else if(onibusSelected == "Onibus2"){
-                startActivity(new Intent(this, Onibus2Activity.class));
+            if(verificaConexao() == true) {
+                if (onibusSelected == "Onibus1") {
+                    startActivity(new Intent(this, Onibus1Activity.class));
+                } else if (onibusSelected == "Onibus2") {
+                    startActivity(new Intent(this, Onibus2Activity.class));
+                }
+            } else{
+                alert("Não há conexão com a internet, por favor tente novamente");
             }
         });
+    }
+
+    //Verifica a conexão com a internet
+    public  boolean verificaConexao() {
+        boolean conectado;
+        ConnectivityManager conectivtyManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (conectivtyManager.getActiveNetworkInfo() != null
+                && conectivtyManager.getActiveNetworkInfo().isAvailable()
+                && conectivtyManager.getActiveNetworkInfo().isConnected()) {
+            conectado = true;
+        } else {
+            conectado = false;
+        }
+        return conectado;
+    }
+        private void alert(String msg){
+        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
     }
 }
