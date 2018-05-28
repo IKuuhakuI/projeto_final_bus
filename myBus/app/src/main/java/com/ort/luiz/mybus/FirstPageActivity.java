@@ -15,10 +15,10 @@ import android.widget.Toast;
 
 public class FirstPageActivity extends Activity {
     Button btnRastrear;
-    Spinner onibus;
-    String[] onibusValues = {"Onibus1", "Onibus2"};
+    Spinner ponto;
+    String[] pontosValues = {"Konoha", "Grand Line", "Magnolia", "Cidade Z", "Disboard", "UA", "Namekusei", "Toutsuki"};
     ArrayAdapter<String>arrayAdapter;
-    String onibusSelected;
+    String pontoSelected;
 
     @Override
     protected void onStart() {
@@ -51,18 +51,18 @@ public class FirstPageActivity extends Activity {
         setContentView(R.layout.activity_first_page);
 
         //Cria o menu suspenso
-        onibus = findViewById(R.id.onibusID);
-        arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, onibusValues);
-        onibus.setAdapter(arrayAdapter);
+        ponto = findViewById(R.id.partidaID);
+        arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, pontosValues);
+        ponto.setAdapter(arrayAdapter);
 
-        alert(String.valueOf(verificaConexao()));
+        //alert(String.valueOf(verificaConexao()));
 
         //Le o item selecionado no menu
-        onibus.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        ponto.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
-                alert("Your selection is: " + onibusValues[i]);
-                onibusSelected = onibusValues[i];
+                //alert("Your selection is: " + pontosValues[i]);
+                pontoSelected = pontosValues[i];
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) { }
@@ -72,9 +72,9 @@ public class FirstPageActivity extends Activity {
         btnRastrear = findViewById(R.id.btnRastrearID);
         btnRastrear.setOnClickListener((View V) ->{
             if(verificaConexao() == true) {
-                if (onibusSelected == "Onibus1") {
+                if (pontoSelected == "Onibus1") {
                     startActivity(new Intent(this, Onibus1Activity.class));
-                } else if (onibusSelected == "Onibus2") {
+                } else if (pontoSelected == "Onibus2") {
                     startActivity(new Intent(this, Onibus2Activity.class));
                 }
             } else{

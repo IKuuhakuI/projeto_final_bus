@@ -13,7 +13,22 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="18dp"
-        android:text="Selecione o Ônibus:"
+        android:text="Selecione o Ponto de Partida:"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textID2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/partidaID"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp"
+        android:text="Selecione o Destino:"
         android:textColor="@android:color/black"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,12 +52,21 @@
         android:layout_alignParentLeft="true" />
 
     <Spinner
-        android:id="@+id/onibusID"
+        android:id="@+id/partidaID"
         android:layout_width="225dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="58dp" />
+
+    <Spinner
+        android:id="@+id/destinoID"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textID2"
+        android:layout_alignStart="@+id/textID2"
+        android:layout_below="@+id/textID2"
+        android:layout_marginTop="32dp" />
 
 </RelativeLayout>
 
