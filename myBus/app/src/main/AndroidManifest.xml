@@ -9,15 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FirstPageActivity">
+        <activity android:name=".SelectActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Onibus1Activity"></activity>
-        <activity android:name=".Onibus2Activity"></activity>
+        <activity android:name=".Onibus1Activity" />
+        <activity android:name=".Onibus2Activity" />
+        <activity android:name=".FirstPageActivity"></activity>
     </application>
 
 </manifest>
