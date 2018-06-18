@@ -11,11 +11,13 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import android.app.Activity;
+import android.widget.Toast;
 
 public class Onibus1Activity extends Activity {
     FirebaseDatabase database;
     DatabaseReference onibus1Ref;
     Button btnVoltar;
+    String acState;
 
     @Override
     protected void onStart() {
@@ -57,21 +59,39 @@ public class Onibus1Activity extends Activity {
             startActivity(new Intent(this, SelectOnibusActivity.class));
         });
 
+
+
         //Le o QR banco de dados
         onibus1Ref.child("QR").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                TextView textView = findViewById(R.id.PartidaID);
+                TextView textView = findViewById(R.id.textPartidaID);
                 String valor = dataSnapshot.child("Valor").getValue().toString();
                 String hora = dataSnapshot.child("Hora").getValue().toString();
+                onibus1Ref.child("AcState").addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        if(Integer.parseInt(dataSnapshot.getValue().toString()) == 0){
+                            acState = "Desligado";
 
-                textView.setText("Ponto atual: " + valor + " Hora: " + hora);
+                        } else {
+                            acState = "Ligado";
+                        }
+                        textView.setText("Ponto atual: " + valor + " \nHora: " + hora + "\nAr Condicionado: " + acState);
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) { }
+                });
             }
 
             @Override
-            public void onCancelled(DatabaseError databaseError) {
-            }
+            public void onCancelled(DatabaseError databaseError) { }
         });
+    }
+
+    private void alert(String msg){
+        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
     }
 }
 

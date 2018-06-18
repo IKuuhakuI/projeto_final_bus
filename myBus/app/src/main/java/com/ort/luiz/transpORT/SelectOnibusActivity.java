@@ -95,7 +95,8 @@ public class SelectOnibusActivity extends Activity {
         }
         return conectado;
     }
-        private void alert(String msg){
+
+    private void alert(String msg){
         Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
     }
 }

@@ -16,6 +16,7 @@ public class Onibus2Activity extends Activity {
     FirebaseDatabase database;
     DatabaseReference onibus2Ref;
     Button btnVoltar;
+    String acState;
 
     @Override
     protected void onStart() {
@@ -61,11 +62,27 @@ public class Onibus2Activity extends Activity {
         onibus2Ref.child("QR").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                TextView textView = findViewById(R.id.PartidaID);
+                TextView textView = findViewById(R.id.textPartidaID);
                 String valor = dataSnapshot.child("Valor").getValue().toString();
                 String hora = dataSnapshot.child("Hora").getValue().toString();
 
-                textView.setText("Ponto atual: " + valor + " Hora: " + hora);
+                onibus2Ref.child("AcState").addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        if(Integer.parseInt(dataSnapshot.getValue().toString()) == 0){
+                            acState = "Desligado";
+                        } else {
+                            acState = "Ligado";
+                        }
+
+                        textView.setText("Ponto atual: " + valor + "\nHora: " + hora + "\nAr Condicionado: " + acState);
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });
             }
 
             @Override
