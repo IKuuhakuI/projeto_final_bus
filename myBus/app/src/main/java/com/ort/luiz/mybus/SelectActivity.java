@@ -3,7 +3,6 @@ package com.ort.luiz.mybus;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 
 public class SelectActivity extends AppCompatActivity {
@@ -17,7 +16,7 @@ public class SelectActivity extends AppCompatActivity {
         btnRastrear = findViewById(R.id.btnRastrearID);
 
         btnOnibus.setOnClickListener(V->{
-            startActivity(new Intent(this, FirstPageActivity.class));
+            startActivity(new Intent(this, SelectOnibusActivity.class));
         });
     }
 }

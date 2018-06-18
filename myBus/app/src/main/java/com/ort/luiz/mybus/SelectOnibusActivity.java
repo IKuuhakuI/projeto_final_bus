@@ -1,6 +1,5 @@
 package com.ort.luiz.mybus;
 
-import android.accessibilityservice.GestureDescription;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
@@ -13,10 +12,10 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-public class FirstPageActivity extends Activity {
+public class SelectOnibusActivity extends Activity {
     Button btnRastrear;
     Spinner ponto;
-    String[] pontosValues = {"Konoha", "Grand Line", "Magnolia", "Cidade Z", "Disboard", "UA", "Namekusei", "Toutsuki"};
+    String[] pontosValues = {"Onibus1", "Onibus2"};
     ArrayAdapter<String>arrayAdapter;
     String pontoSelected;
 
@@ -48,7 +47,7 @@ public class FirstPageActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_first_page);
+        setContentView(R.layout.activity_select_onibus);
 
         //Cria o menu suspenso
         ponto = findViewById(R.id.partidaID);

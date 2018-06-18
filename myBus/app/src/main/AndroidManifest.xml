@@ -18,7 +18,7 @@
         </activity>
         <activity android:name=".Onibus1Activity" />
         <activity android:name=".Onibus2Activity" />
-        <activity android:name=".FirstPageActivity"></activity>
+        <activity android:name=".SelectOnibusActivity"></activity>
     </application>
 
 </manifest>

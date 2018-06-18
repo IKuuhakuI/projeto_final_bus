@@ -54,7 +54,7 @@ public class Onibus2Activity extends Activity {
         btnVoltar = findViewById(R.id.btnVoltarID);
         btnVoltar.setOnClickListener((V)->{
             //Abre a pagina inicial
-            startActivity(new Intent(this, FirstPageActivity.class));
+            startActivity(new Intent(this, SelectOnibusActivity.class));
         });
 
 //Le do banco de dados
