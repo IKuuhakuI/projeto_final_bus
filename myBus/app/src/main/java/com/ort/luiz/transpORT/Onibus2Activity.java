@@ -61,7 +61,7 @@ public class Onibus2Activity extends Activity {
         onibus2Ref.child("QR").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                TextView textView = findViewById(R.id.textID);
+                TextView textView = findViewById(R.id.PartidaID);
                 String valor = dataSnapshot.child("Valor").getValue().toString();
                 String hora = dataSnapshot.child("Hora").getValue().toString();
 

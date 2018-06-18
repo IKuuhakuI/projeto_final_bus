@@ -50,7 +50,7 @@ public class SelectOnibusActivity extends Activity {
         setContentView(R.layout.activity_select_onibus);
 
         //Cria o menu suspenso
-        onibus = findViewById(R.id.partidaID);
+        onibus = findViewById(R.id.PartidaID);
         arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, onibusValues);
         onibus.setAdapter(arrayAdapter);
 

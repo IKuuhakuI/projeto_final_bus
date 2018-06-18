@@ -1,7 +1,6 @@
 package com.ort.luiz.transpORT;
 
 import android.content.Context;
-import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.app.Activity;
@@ -14,10 +13,11 @@ import android.widget.Toast;
 
 public class SelectRotaActivity extends Activity {
     Button btnRastrear;
-    Spinner ponto;
+    Spinner pontoInicial, pontoFinal;
     String[] pontosValues = {"Cidade Z", "Disboard", "Grand Line", "Konoha", "Magnolia", "Namekusei", "Toutsuki", "UA"};
-    ArrayAdapter<String>arrayAdapter;
-    String pontoSelected;
+    ArrayAdapter<String>arrayAdapterPontoInicial;
+    ArrayAdapter<String>arrayAdapterPontoFinal;
+    String pontoInicialSelected, pontoFinalSelected;
 
     @Override
     protected void onStart() {
@@ -50,19 +50,35 @@ public class SelectRotaActivity extends Activity {
         setContentView(R.layout.activity_select_rota);
 
         //Cria o menu suspenso
-        ponto = findViewById(R.id.partidaID);
-        arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, pontosValues);
-        ponto.setAdapter(arrayAdapter);
+        pontoInicial = findViewById(R.id.partidaID);
+        pontoFinal = findViewById(R.id.finalID);
+
+        arrayAdapterPontoInicial = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, pontosValues);
+        arrayAdapterPontoFinal = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, pontosValues);
+
+        pontoInicial.setAdapter(arrayAdapterPontoInicial);
+        pontoFinal.setAdapter(arrayAdapterPontoFinal);
 
         //alert(String.valueOf(verificaConexao()));
 
-        //Le o item selecionado no menu
-        ponto.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        //Le o item selecionado no menu ponto inicial
+        pontoInicial.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
                 //alert("Your selection is: " + pontosValues[i]);
-                pontoSelected = pontosValues[i];
+                pontoInicialSelected = pontosValues[i];
             }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) { }
+        });
+
+        //Le o item selecionado no menu ponto final
+        pontoFinal.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
+                pontoFinalSelected = pontosValues[i];
+            }
+
             @Override
             public void onNothingSelected(AdapterView<?> parent) { }
         });
@@ -71,11 +87,7 @@ public class SelectRotaActivity extends Activity {
         btnRastrear = findViewById(R.id.btnRastrearID);
         btnRastrear.setOnClickListener((View V) ->{
             if(verificaConexao() == true) {
-                if (pontoSelected == "Onibus1") {
-                    startActivity(new Intent(this, Onibus1Activity.class));
-                } else if (pontoSelected == "Onibus2") {
-                    startActivity(new Intent(this, Onibus2Activity.class));
-                }
+
             } else{
                 alert("Não há conexão com a internet, por favor tente novamente");
             }
