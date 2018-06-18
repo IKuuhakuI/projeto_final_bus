@@ -57,7 +57,7 @@
         android:id="@+id/btnRastrearID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_above="@+id/btnVoltarID"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="43dp"
@@ -67,6 +67,40 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/partidaID" />
+
+    <Button
+        android:id="@+id/btnVoltarID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="43dp"
+        android:text="Voltar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/partidaID" />
+
+    <TextView
+        android:id="@+id/onibus1TextID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/finalID"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="53dp"
+        android:text="Onibus1:" />
+
+    <TextView
+        android:id="@+id/onibus2TextID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/onibus1TextID"
+        android:layout_alignStart="@+id/onibus1TextID"
+        android:layout_below="@+id/onibus1TextID"
+        android:layout_marginTop="39dp"
+        android:text="Onibus2:" />
 
 </RelativeLayout>
 

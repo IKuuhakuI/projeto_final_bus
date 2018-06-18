@@ -13,7 +13,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 public class SelectOnibusActivity extends Activity {
-    Button btnRastrear;
+    Button btnRastrear, btnVoltar;
     Spinner onibus;
     String[] onibusValues = {"Onibus1", "Onibus2"};
     ArrayAdapter<String>arrayAdapter;
@@ -49,8 +49,11 @@ public class SelectOnibusActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_onibus);
 
-        //Cria o menu suspenso
         onibus = findViewById(R.id.PartidaID);
+        btnRastrear = findViewById(R.id.btnRastrearID);
+        btnVoltar = findViewById(R.id.btnVoltarID);
+
+        //Cria o menu suspenso
         arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, onibusValues);
         onibus.setAdapter(arrayAdapter);
 
@@ -68,7 +71,7 @@ public class SelectOnibusActivity extends Activity {
         });
 
         //Botao para rastrear o ônibus
-        btnRastrear = findViewById(R.id.btnRastrearID);
+
         btnRastrear.setOnClickListener((View V) ->{
             if(verificaConexao() == true) {
                 if (onibusSelected == "Onibus1") {
@@ -79,6 +82,10 @@ public class SelectOnibusActivity extends Activity {
             } else{
                 alert("Não há conexão com a internet, por favor tente novamente");
             }
+        });
+
+        btnVoltar.setOnClickListener(v -> {
+            startActivity(new Intent(this, SelectActivity.class));
         });
     }
 
