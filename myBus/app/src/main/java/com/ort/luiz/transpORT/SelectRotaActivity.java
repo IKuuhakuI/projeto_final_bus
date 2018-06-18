@@ -1,4 +1,4 @@
-package com.ort.luiz.mybus;
+package com.ort.luiz.transpORT;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,10 +12,10 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-public class SelectOnibusActivity extends Activity {
+public class SelectRotaActivity extends Activity {
     Button btnRastrear;
     Spinner ponto;
-    String[] pontosValues = {"Onibus1", "Onibus2"};
+    String[] pontosValues = {"Cidade Z", "Disboard", "Grand Line", "Konoha", "Magnolia", "Namekusei", "Toutsuki", "UA"};
     ArrayAdapter<String>arrayAdapter;
     String pontoSelected;
 
@@ -47,7 +47,7 @@ public class SelectOnibusActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_select_onibus);
+        setContentView(R.layout.activity_select_rota);
 
         //Cria o menu suspenso
         ponto = findViewById(R.id.partidaID);
@@ -95,7 +95,7 @@ public class SelectOnibusActivity extends Activity {
         }
         return conectado;
     }
-        private void alert(String msg){
+    private void alert(String msg){
         Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
     }
 }

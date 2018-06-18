@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ort.luiz.mybus.SelectActivity">
+    tools:context="com.ort.luiz.transpORT.SelectActivity">
 
     <Button
         android:id="@+id/btnRotaId"

@@ -1,4 +1,4 @@
-package com.ort.luiz.mybus;
+package com.ort.luiz.transpORT;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

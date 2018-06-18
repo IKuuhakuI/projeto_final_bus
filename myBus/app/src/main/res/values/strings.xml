@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">My Bus</string>
+    <string name="title_activity_select_rota">SelectRotaActivity</string>
 </resources>
