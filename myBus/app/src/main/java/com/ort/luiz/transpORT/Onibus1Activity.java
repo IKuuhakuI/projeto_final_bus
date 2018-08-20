@@ -10,13 +10,15 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.ort.luiz.mybus.RotaOnibus1Activity;
+
 import android.app.Activity;
 import android.widget.Toast;
 
 public class Onibus1Activity extends Activity {
     FirebaseDatabase database;
     DatabaseReference onibus1Ref;
-    Button btnVoltar;
+    Button btnVoltar, btnVerRota;
     String acState;
 
     @Override
@@ -53,13 +55,18 @@ public class Onibus1Activity extends Activity {
         onibus1Ref = database.getReference("Onibus1");
 
         //Botao voltar
-        btnVoltar = findViewById(R.id.btnVoltarID);
+        btnVoltar = findViewById(R.id.btnVerRotaID);
         btnVoltar.setOnClickListener((V)->{
             //Abre a pagina inicial
             startActivity(new Intent(this, SelectOnibusActivity.class));
         });
 
-
+        //Botao ver rota
+        btnVerRota = findViewById(R.id.btnVerRotaID);
+        btnVerRota.setOnClickListener((V)->{
+            //Abre a activity da rota do ônibus 1
+            startActivity(new Intent(this,RotaOnibus1Activity.class));
+        });
 
         //Le o QR banco de dados
         onibus1Ref.child("QR").addValueEventListener(new ValueEventListener() {

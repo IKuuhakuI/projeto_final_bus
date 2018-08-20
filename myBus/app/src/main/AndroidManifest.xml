@@ -9,17 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.ort.luiz.transpORT.SelectActivity">
+        <activity android:name=".SelectActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.ort.luiz.transpORT.Onibus1Activity" />
-        <activity android:name="com.ort.luiz.transpORT.Onibus2Activity" />
-        <activity android:name="com.ort.luiz.transpORT.SelectOnibusActivity" />
-        <activity android:name="com.ort.luiz.transpORT.SelectRotaActivity"></activity>
+        <activity android:name=".Onibus1Activity" />
+        <activity android:name=".Onibus2Activity" />
+        <activity android:name=".SelectOnibusActivity" />
+        <activity android:name=".SelectRotaActivity" />
+        <activity android:name="com.ort.luiz.mybus.RotaOnibus1Activity"></activity>
     </application>
 
 </manifest>

@@ -57,7 +57,7 @@
         android:id="@+id/btnRastrearID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/btnVoltarID"
+        android:layout_above="@+id/btnVerRotaID"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="43dp"
@@ -69,7 +69,7 @@
         app:layout_constraintTop_toBottomOf="@+id/partidaID" />
 
     <Button
-        android:id="@+id/btnVoltarID"
+        android:id="@+id/btnVerRotaID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

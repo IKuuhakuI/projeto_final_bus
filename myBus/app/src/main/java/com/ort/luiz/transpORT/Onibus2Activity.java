@@ -52,7 +52,7 @@ public class Onibus2Activity extends Activity {
         onibus2Ref = database.getReference("Onibus2");
 
         //Botao voltar
-        btnVoltar = findViewById(R.id.btnVoltarID);
+        btnVoltar = findViewById(R.id.btnVerRotaID);
         btnVoltar.setOnClickListener((V)->{
             //Abre a pagina inicial
             startActivity(new Intent(this, SelectOnibusActivity.class));
