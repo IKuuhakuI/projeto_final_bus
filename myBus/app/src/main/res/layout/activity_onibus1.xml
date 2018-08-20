@@ -22,13 +22,13 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="43dp"
         android:text="Ver Rota"
-        app:layout_constraintBottom_toTopOf="@+id/btnVoltarID2"
+        app:layout_constraintBottom_toTopOf="@+id/btnVoltarID"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btnVoltarID2"
+        android:id="@+id/btnVoltarID"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="43dp"

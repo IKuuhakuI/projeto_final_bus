@@ -20,7 +20,8 @@
         <activity android:name=".Onibus2Activity" />
         <activity android:name=".SelectOnibusActivity" />
         <activity android:name=".SelectRotaActivity" />
-        <activity android:name="com.ort.luiz.mybus.RotaOnibus1Activity"></activity>
+        <activity android:name=".RotaOnibus1Activity" />
+        <activity android:name=".RotaOnibus2Activity"></activity>
     </application>
 
 </manifest>

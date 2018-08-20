@@ -15,7 +15,8 @@ import android.app.Activity;
 public class Onibus2Activity extends Activity {
     FirebaseDatabase database;
     DatabaseReference onibus2Ref;
-    Button btnVoltar;
+
+    Button btnVoltar, btnVerRota;
     String acState;
 
     @Override
@@ -46,19 +47,26 @@ public class Onibus2Activity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_onibus1);
+        setContentView(R.layout.activity_onibus2);
 
         database = FirebaseDatabase.getInstance();
         onibus2Ref = database.getReference("Onibus2");
 
         //Botao voltar
-        btnVoltar = findViewById(R.id.btnVerRotaID);
+        btnVoltar = findViewById(R.id.btnVoltar2ID);
         btnVoltar.setOnClickListener((V)->{
             //Abre a pagina inicial
             startActivity(new Intent(this, SelectOnibusActivity.class));
         });
 
-//Le do banco de dados
+        //Botao ver rota
+        btnVerRota = findViewById(R.id.btnVerRotaID);
+        btnVerRota.setOnClickListener((V)->{
+            //Abre as rotas do Onibus 2
+            startActivity(new Intent(this, RotaOnibus2Activity.class));
+        });
+
+        //Le do banco de dados
         onibus2Ref.child("QR").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {

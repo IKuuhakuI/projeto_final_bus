@@ -1,13 +1,8 @@
-package com.ort.luiz.mybus;
+package com.ort.luiz.transpORT;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
-
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.ort.luiz.transpORT.R;
-
 
 public class RotaOnibus1Activity extends AppCompatActivity {
 

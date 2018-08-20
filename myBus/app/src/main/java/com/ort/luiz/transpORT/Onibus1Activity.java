@@ -10,7 +10,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.ort.luiz.mybus.RotaOnibus1Activity;
 
 import android.app.Activity;
 import android.widget.Toast;
@@ -55,7 +54,7 @@ public class Onibus1Activity extends Activity {
         onibus1Ref = database.getReference("Onibus1");
 
         //Botao voltar
-        btnVoltar = findViewById(R.id.btnVerRotaID);
+        btnVoltar = findViewById(R.id.btnVoltarID);
         btnVoltar.setOnClickListener((V)->{
             //Abre a pagina inicial
             startActivity(new Intent(this, SelectOnibusActivity.class));

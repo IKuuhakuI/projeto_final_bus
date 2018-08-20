@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ort.luiz.mybus.RotaOnibus1Activity">
+    tools:context=".RotaOnibus1Activity">
 
     <TextView
         android:id="@+id/rotaOnibus1ID"
