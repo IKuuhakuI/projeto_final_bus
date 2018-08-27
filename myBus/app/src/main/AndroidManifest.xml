@@ -21,7 +21,8 @@
         <activity android:name=".SelectOnibusActivity" />
         <activity android:name=".SelectRotaActivity" />
         <activity android:name=".RotaOnibus1Activity" />
-        <activity android:name=".RotaOnibus2Activity"></activity>
+        <activity android:name=".RotaOnibus2Activity" />
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
