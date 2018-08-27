@@ -16,7 +16,7 @@ public class Onibus2Activity extends Activity {
     FirebaseDatabase database;
     DatabaseReference onibus2Ref;
 
-    Button btnVoltar, btnVerRota;
+    Button btnVoltar, btnVerRotaOnibus2;
     String acState;
 
     @Override
@@ -53,18 +53,13 @@ public class Onibus2Activity extends Activity {
         onibus2Ref = database.getReference("Onibus2");
 
         //Botao voltar
-        btnVoltar = findViewById(R.id.btnVoltar2ID);
-        btnVoltar.setOnClickListener((V)->{
-            //Abre a pagina inicial
-            startActivity(new Intent(this, SelectOnibusActivity.class));
-        });
+        btnVoltar = findViewById(R.id.btnVoltarID);
+        //Abre a pagina inicial
+        btnVoltar.setOnClickListener((V)->{ startActivity(new Intent(this, SelectOnibusActivity.class)); });
 
-        //Botao ver rota
-        btnVerRota = findViewById(R.id.btnVerRotaID);
-        btnVerRota.setOnClickListener((V)->{
-            //Abre as rotas do Onibus 2
-            startActivity(new Intent(this, RotaOnibus2Activity.class));
-        });
+        btnVerRotaOnibus2 = findViewById(R.id.btnVerRotaOnibus2ID);
+        //Abre as rotas do ônibus 2
+        btnVerRotaOnibus2.setOnClickListener((V)->{ startActivity(new Intent(this, RotaOnibus2Activity.class)); });
 
         //Le do banco de dados
         onibus2Ref.child("QR").addValueEventListener(new ValueEventListener() {

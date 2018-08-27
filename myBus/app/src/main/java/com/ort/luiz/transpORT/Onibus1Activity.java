@@ -61,7 +61,7 @@ public class Onibus1Activity extends Activity {
         });
 
         //Botao ver rota
-        btnVerRota = findViewById(R.id.btnVerRotaID);
+        btnVerRota = findViewById(R.id.btnVerRotaOnibus1ID);
         btnVerRota.setOnClickListener((V)->{
             //Abre a activity da rota do ônibus 1
             startActivity(new Intent(this,RotaOnibus1Activity.class));

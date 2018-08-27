@@ -8,20 +8,19 @@
 
     <TextView
         android:id="@+id/rotaOnibus2ID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="184dp"
+        android:layout_width="123dp"
+        android:layout_height="142dp"
         android:layout_marginEnd="163dp"
         android:layout_marginStart="163dp"
-        android:layout_marginTop="273dp"
         android:text="Rota"
-        app:layout_constraintBottom_toTopOf="@+id/btnVoltar2ID"
+        app:layout_constraintBottom_toTopOf="@+id/btnVoltarOnibus2ID"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnVoltar2ID"
+        android:id="@+id/btnVoltarOnibus2ID"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginBottom="43dp"

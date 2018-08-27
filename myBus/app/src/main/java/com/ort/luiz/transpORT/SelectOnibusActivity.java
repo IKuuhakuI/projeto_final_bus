@@ -51,7 +51,7 @@ public class SelectOnibusActivity extends Activity {
 
         onibus = findViewById(R.id.PartidaID);
         btnRastrear = findViewById(R.id.btnRastrearID);
-        btnVoltar = findViewById(R.id.btnVerRotaID);
+        btnVoltar = findViewById(R.id.btnVerRotaOnibus1ID);
 
         //Cria o menu suspenso
         arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, onibusValues);

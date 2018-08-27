@@ -72,7 +72,7 @@ public class SelectRotaActivity extends Activity {
         //Instanciando as variáveis
         pontoInicial = findViewById(R.id.partidaID);
         pontoFinal = findViewById(R.id.finalID);
-        btnVoltar = findViewById(R.id.btnVerRotaID);
+        btnVoltar = findViewById(R.id.btnVerRotaOnibus1ID);
         btnRastrear = findViewById(R.id.btnRastrearID);
         textOnibus1 = findViewById(R.id.onibus1TextID);
         textOnibus2 = findViewById(R.id.onibus2TextID);

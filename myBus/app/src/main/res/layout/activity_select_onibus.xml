@@ -25,7 +25,7 @@
         android:id="@+id/btnRastrearID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/btnVerRotaID"
+        android:layout_above="@+id/btnVerRotaOnibus1ID"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="43dp"
@@ -45,7 +45,7 @@
         android:layout_marginTop="58dp" />
 
     <Button
-        android:id="@+id/btnVerRotaID"
+        android:id="@+id/btnVerRotaOnibus1ID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
