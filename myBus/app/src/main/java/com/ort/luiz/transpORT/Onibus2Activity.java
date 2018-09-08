@@ -55,11 +55,11 @@ public class Onibus2Activity extends Activity {
         //Botao voltar
         btnVoltar = findViewById(R.id.btnVoltarID);
         //Abre a pagina inicial
-        btnVoltar.setOnClickListener((V)->{ startActivity(new Intent(this, SelectOnibusActivity.class)); });
+        btnVoltar.setOnClickListener((V)->{ startActivity(new Intent(this, SelectOnibusActivity.class)); finish();});
 
         btnVerRotaOnibus2 = findViewById(R.id.btnVerRotaOnibus2ID);
         //Abre as rotas do ônibus 2
-        btnVerRotaOnibus2.setOnClickListener((V)->{ startActivity(new Intent(this, RotaOnibus2Activity.class)); });
+        btnVerRotaOnibus2.setOnClickListener((V)->{ startActivity(new Intent(this, RotaOnibus2Activity.class)); finish();});
 
         //Le do banco de dados
         onibus2Ref.child("QR").addValueEventListener(new ValueEventListener() {

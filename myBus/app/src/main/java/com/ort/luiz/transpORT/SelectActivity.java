@@ -17,10 +17,12 @@ public class SelectActivity extends AppCompatActivity {
 
         btnOnibus.setOnClickListener(v->{
             startActivity(new Intent(this, SelectOnibusActivity.class));
+            finish();
         });
 
         btnRota.setOnClickListener(v -> {
             startActivity(new Intent(this, SelectRotaActivity.class));
+            finish();
         });
 
     }

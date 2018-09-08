@@ -9,7 +9,7 @@
         android:roundIcon="@drawable/icon_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SelectActivity">
+        <activity android:name=".SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,7 +22,7 @@
         <activity android:name=".SelectRotaActivity" />
         <activity android:name=".RotaOnibus1Activity" />
         <activity android:name=".RotaOnibus2Activity" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".SelectActivity"></activity>
     </application>
 
 </manifest>
