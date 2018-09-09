@@ -9,53 +9,40 @@
 
     <Button
         android:id="@+id/btnRotaId"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="57dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginBottom="118dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginRight="88dp"
         android:background="@drawable/button_border"
         android:text="Rota"
         android:textColor="@color/roxo"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnOnibusId" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <Button
         android:id="@+id/btnOnibusId"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="57dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginBottom="118dp"
+        android:layout_marginLeft="88dp"
+        android:layout_marginStart="88dp"
         android:background="@drawable/button_border"
         android:text="Ônibus"
         android:textColor="@color/roxo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="145dp"
-        android:layout_height="34dp"
-        android:layout_marginTop="8dp"
-        android:text="Rastrear por:"
-        android:textColor="@color/roxo"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="7dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/imageView3"
+        android:layout_width="272dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRotaId"
-        app:srcCompat="@drawable/mapa" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logotipo" />
 
 </android.support.constraint.ConstraintLayout>

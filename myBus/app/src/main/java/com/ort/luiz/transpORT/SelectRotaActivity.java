@@ -92,7 +92,7 @@ public class SelectRotaActivity extends Activity {
             public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
                 //alert("Your selection is: " + pontosValues[i]);
                 pontoInicialSelected = pontosValues[i];
-                alert("mudou");
+                //alert("mudou");
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) { }
@@ -155,10 +155,10 @@ public class SelectRotaActivity extends Activity {
                                     public void onDataChange(DataSnapshot dataSnapshot) {
                                         if(Integer.parseInt(dataSnapshot.getValue().toString()) == 1){
                                             atOnibus1 = 1;
-                                            alert("Aqui");
+                                            //alert("Aqui");
                                         } else {
                                             atOnibus1 = 0;
-                                            alert("Aqui");
+                                            //alert("Aqui");
                                         }
                                         if(atOnibus1 == 0){
                                             textOnibus1.setText("Onibus1: Não passa");
