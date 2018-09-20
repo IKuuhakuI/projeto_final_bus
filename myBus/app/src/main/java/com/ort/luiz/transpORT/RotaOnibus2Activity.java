@@ -9,7 +9,7 @@ import android.widget.TextView;
 public class RotaOnibus2Activity extends AppCompatActivity {
 
     TextView rotaOnibus2;
-    String pontosOnibus2 = "Disboard\nGrand Line\nKonoha\nToutsuki\nUA";
+    String pontosOnibus2 = "Cidade Z\nDisboard\nKonoha\nMagnolia\nNamekusei";
     Button btnVoltar;
 
     @Override
