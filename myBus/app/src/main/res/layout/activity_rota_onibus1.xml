@@ -7,16 +7,28 @@
     tools:context=".RotaOnibus1Activity">
 
     <TextView
-        android:id="@+id/rotaOnibus1ID"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="274dp"
-        android:layout_marginEnd="177dp"
-        android:layout_marginStart="178dp"
-        android:layout_marginTop="274dp"
+        android:id="@+id/rotaOnibus2ID"
+        android:layout_width="123dp"
+        android:layout_height="142dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginStart="163dp"
         android:text="Rota"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnVoltarOnibus1ID"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnVoltarOnibus1ID"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="43dp"
+        android:text="Voltar"
+        android:background="@drawable/button_border"
+        android:textColor="@color/roxo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>
