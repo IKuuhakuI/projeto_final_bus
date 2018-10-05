@@ -8,8 +8,6 @@ import android.widget.TextView;
 
 public class RotaOnibus2Activity extends AppCompatActivity {
 
-    TextView rotaOnibus2;
-    String pontosOnibus2 = "Cidade Z\nDisboard\nKonoha\nMagnolia\nNamekusei";
     Button btnVoltar;
 
     @Override
@@ -17,14 +15,11 @@ public class RotaOnibus2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rota_onibus2);
 
-        rotaOnibus2 = findViewById(R.id.rotaOnibus2ID);
         btnVoltar = findViewById(R.id.btnVoltarOnibus2ID);
 
         btnVoltar.setOnClickListener((V)->{
             startActivity(new Intent(this, Onibus2Activity.class));
             finish();
         });
-
-        rotaOnibus2.setText(pontosOnibus2);
     }
 }

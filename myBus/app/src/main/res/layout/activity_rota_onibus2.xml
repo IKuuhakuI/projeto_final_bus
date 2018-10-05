@@ -6,29 +6,37 @@
     android:layout_height="match_parent"
     tools:context=".RotaOnibus2Activity">
 
-    <TextView
-        android:id="@+id/rotaOnibus2ID"
-        android:layout_width="123dp"
-        android:layout_height="142dp"
-        android:layout_marginEnd="163dp"
-        android:layout_marginStart="163dp"
-        android:text="Rota"
-        app:layout_constraintBottom_toTopOf="@+id/btnVoltarOnibus2ID"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/btnVoltarOnibus2ID"
         android:layout_width="0dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="43dp"
-        android:text="Voltar"
+        android:layout_marginBottom="24dp"
         android:background="@drawable/button_border"
+        android:text="Voltar"
         android:textColor="@color/roxo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnVoltarOnibus2ID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9"
+        app:srcCompat="@drawable/rota_onibus2" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
 </android.support.constraint.ConstraintLayout>
