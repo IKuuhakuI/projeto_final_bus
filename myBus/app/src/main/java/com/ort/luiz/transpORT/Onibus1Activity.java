@@ -85,7 +85,7 @@ public class Onibus1Activity extends Activity {
                         } else {
                             acState = "Ligado";
                         }
-                        textView.setText("Ponto atual: " + valor + " \nHora: " + hora + "\nAr Condicionado: " + acState);
+                        textView.setText("Ponto atual: " + valor + " \nChegou às: " + hora + "\nAr Condicionado: " + acState);
                     }
 
                     @Override
