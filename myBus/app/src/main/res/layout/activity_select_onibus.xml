@@ -6,45 +6,63 @@
     android:layout_height="match_parent"
     tools:context=".SelectOnibusActivity">
 
+    <ImageView
+        android:id="@+id/rectAqua"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/logoId"
+        android:src="@color/aqua" />
+
+    <ImageView
+        android:id="@+id/rectRoxo"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@color/roxo" />
+
+
     <TextView
         android:id="@+id/textPartidaID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/logoId"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="12dp"
         android:text="Selecione o Ônibus:"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/background_dark"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Spinner
+        android:id="@+id/PartidaID"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textPartidaID"
+        android:layout_centerHorizontal="true" />
+
     <Button
         android:id="@+id/btnRastrearID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/btnVerRotaOnibus1ID"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="43dp"
-        android:text="Rastrear Ônibus"
+        android:layout_alignTop="@+id/rectRoxo"
+        android:layout_marginTop="23dp"
         android:background="@drawable/button_border"
-        android:textColor="@color/roxo"
+        android:text="Rastrear Ônibus"
+        android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PartidaID" />
-
-    <Spinner
-        android:id="@+id/PartidaID"
-        android:layout_width="225dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="58dp" />
 
     <Button
         android:id="@+id/btnVerRotaOnibus1ID"
@@ -53,15 +71,25 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="43dp"
-        android:text="Voltar"
+        android:layout_marginBottom="26dp"
         android:background="@drawable/button_border"
-        android:textColor="@color/roxo"
+        android:text="Voltar"
+        android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PartidaID" />
+
+    <ImageView
+        android:id="@+id/logoId"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo" />
+
+
 
 </RelativeLayout>
 

@@ -9,13 +9,10 @@
     <TextView
         android:id="@+id/rotaOnibus1ID"
         android:layout_width="123dp"
-        android:layout_height="142dp"
-        android:layout_marginEnd="163dp"
-        android:layout_marginStart="163dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="131dp"
+        android:layout_marginTop="16dp"
         android:text="Rota"
-        app:layout_constraintBottom_toTopOf="@+id/btnVoltarOnibus1ID"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,12 +20,21 @@
         android:id="@+id/btnVoltarOnibus1ID"
         android:layout_width="0dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="43dp"
-        android:text="Voltar"
+        android:layout_marginBottom="24dp"
         android:background="@drawable/button_border"
+        android:text="Voltar"
         android:textColor="@color/roxo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="384dp"
+        android:layout_height="387dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnVoltarOnibus1ID"
+        app:srcCompat="@drawable/rota_onibus1"
+        tools:layout_editor_absoluteX="0dp" />
 </android.support.constraint.ConstraintLayout>
