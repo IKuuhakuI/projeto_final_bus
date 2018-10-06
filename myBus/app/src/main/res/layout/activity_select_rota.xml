@@ -67,7 +67,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/partidaID" />
+        app:layout_constraintTop_toBottomOf="@+id/partidaID"
+        android:layout_alignParentLeft="true" />
 
     <Button
         android:id="@+id/btnVerRotaOnibus1ID"
@@ -83,26 +84,29 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/partidaID" />
+        app:layout_constraintTop_toBottomOf="@+id/partidaID"
+        android:layout_alignParentLeft="true" />
 
     <TextView
         android:id="@+id/onibus1TextID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/finalID"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="53dp"
-        android:text="Onibus1:" />
+        android:layout_marginTop="257dp"
+        android:text="Onibus1:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/onibus2TextID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/onibus1TextID"
-        android:layout_alignStart="@+id/onibus1TextID"
-        android:layout_below="@+id/onibus1TextID"
-        android:layout_marginTop="39dp"
-        android:text="Onibus2:" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp"
+        android:text="Onibus2:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
 
     <ImageView
         android:id="@+id/imageView12"
@@ -110,7 +114,8 @@
         android:layout_height="169dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:src="@color/roxo" />
+        android:src="@color/roxo"
+        android:layout_alignParentLeft="true" />
 
 </RelativeLayout>
 

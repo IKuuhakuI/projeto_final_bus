@@ -130,7 +130,7 @@ public class SelectRotaActivity extends Activity {
                                         if(atOnibus2 == 0){
                                             textOnibus2.setText("Onibus2: Não passa");
                                         } else {
-                                            textOnibus2.setText("Onibus2: Passa");
+                                            textOnibus2.setText("Onibus2: Passa | Mostrar Rota");
                                         }
                                     }
 
@@ -164,7 +164,7 @@ public class SelectRotaActivity extends Activity {
                                         if(atOnibus1 == 0){
                                             textOnibus1.setText("Onibus1: Não passa");
                                         } else {
-                                            textOnibus1.setText("Onibus1: Passa");
+                                            textOnibus1.setText("Onibus1: Passa | Mostrar Rota");
                                         }
                                     }
                                     @Override
@@ -185,6 +185,16 @@ public class SelectRotaActivity extends Activity {
             } else{
                 alert("Não há conexão com a internet, por favor tente novamente");
             }
+        });
+
+        textOnibus1.setOnClickListener(v -> {
+            //alert("Clicou");
+            startActivity(new Intent(this, RotaOnibus1Activity.class));
+        });
+
+        textOnibus2.setOnClickListener(v -> {
+            //alert(clicou);
+            startActivity(new Intent(this, RotaOnibus2Activity.class));
         });
 
         btnVoltar. setOnClickListener(v -> {
