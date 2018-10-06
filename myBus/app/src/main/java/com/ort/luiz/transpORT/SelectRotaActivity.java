@@ -111,6 +111,7 @@ public class SelectRotaActivity extends Activity {
 
         //Botao para rastrear o ônibus
         btnRastrear.setOnClickListener((View V) ->{
+            btnRastrear.setBackgroundResource(R.color.aqua);
             if(verificaConexao() == true) {
                 if(pontoInicialSelected != pontoFinalSelected){
                     //Verifica se o ônibus2 passa pelo ponto inicial
@@ -188,6 +189,7 @@ public class SelectRotaActivity extends Activity {
 
         btnVoltar. setOnClickListener(v -> {
             startActivity(new Intent(this, SelectActivity.class));
+            btnVoltar.setBackgroundResource(R.color.aqua);
             finish();
         });
     }

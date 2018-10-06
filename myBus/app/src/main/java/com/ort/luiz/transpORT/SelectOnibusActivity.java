@@ -73,6 +73,7 @@ public class SelectOnibusActivity extends Activity {
         //Botao para rastrear o ônibus
 
         btnRastrear.setOnClickListener((View V) ->{
+            btnRastrear.setBackgroundResource(R.color.aqua);
             if(verificaConexao() == true) {
                 if (onibusSelected == "Onibus1") {
                     startActivity(new Intent(this, Onibus1Activity.class));
@@ -88,6 +89,7 @@ public class SelectOnibusActivity extends Activity {
 
         btnVoltar.setOnClickListener(v -> {
             startActivity(new Intent(this, SelectActivity.class));
+            btnVoltar.setBackgroundResource(R.color.aqua);
             finish();
         });
     }

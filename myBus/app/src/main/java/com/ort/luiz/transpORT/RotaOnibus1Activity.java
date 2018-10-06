@@ -17,6 +17,7 @@ public class RotaOnibus1Activity extends AppCompatActivity {
         btnVoltar = findViewById(R.id.btnVoltarOnibus1ID);
 
         btnVoltar.setOnClickListener((V)->{
+            btnVoltar.setBackgroundResource(R.color.aqua);
             startActivity(new Intent(this, Onibus1Activity.class));
         });
 

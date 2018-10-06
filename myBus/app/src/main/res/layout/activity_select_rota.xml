@@ -57,13 +57,12 @@
         android:id="@+id/btnRastrearID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/btnVerRotaOnibus1ID"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="43dp"
-        android:text="Rastrear Ônibus"
+        android:layout_marginBottom="105dp"
         android:background="@drawable/button_border"
-        android:textColor="@color/roxo"
+        android:text="Rastrear Ônibus"
+        android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -75,12 +74,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="43dp"
-        android:text="Voltar"
+        android:layout_marginBottom="17dp"
         android:background="@drawable/button_border"
-        android:textColor="@color/roxo"
+        android:text="Voltar"
+        android:textColor="@color/White"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -105,6 +103,14 @@
         android:layout_below="@+id/onibus1TextID"
         android:layout_marginTop="39dp"
         android:text="Onibus2:" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="match_parent"
+        android:layout_height="169dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:src="@color/roxo" />
 
 </RelativeLayout>
 

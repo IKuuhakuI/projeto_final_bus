@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="284dp"
+        android:text="Conecte-se a Internet"
         android:textColor="@android:color/background_dark"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
