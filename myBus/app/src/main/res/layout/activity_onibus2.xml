@@ -22,12 +22,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="284dp"
+        android:layout_marginTop="41dp"
         android:textColor="@android:color/black"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView14"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView17"
         tools:text="Conecte-se a Internet" />
 
     <Button

@@ -2,6 +2,7 @@ package com.ort.luiz.transpORT;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.app.Activity;

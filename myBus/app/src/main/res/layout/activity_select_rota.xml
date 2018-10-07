@@ -6,15 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".SelectRotaActivity">
 
+    <ImageView
+        android:id="@+id/fundoAqua"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="110dp"
+        android:src="@color/aqua" />
+
     <TextView
         android:id="@+id/textPartidaID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="123dp"
         android:text="Selecione o Ponto de Partida:"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/background_light"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
@@ -25,19 +34,18 @@
         android:id="@+id/partidaID"
         android:layout_width="225dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="58dp" />
+        android:layout_below="@+id/textPartidaID"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/textFinalID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/partidaID"
+        android:layout_above="@+id/finalID"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
+        android:layout_marginBottom="-237dp"
         android:text="Selecione o Ponto Final:"
-        android:textColor="@android:color/black"
+        android:textColor="@color/White"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
@@ -48,10 +56,9 @@
         android:id="@+id/finalID"
         android:layout_width="225dp"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/partidaID"
-        android:layout_alignStart="@+id/partidaID"
-        android:layout_below="@+id/textFinalID"
-        android:layout_marginTop="13dp" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="237dp" />
 
     <Button
         android:id="@+id/btnRastrearID"
@@ -91,9 +98,9 @@
         android:id="@+id/onibus1TextID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="257dp"
+        android:layout_marginBottom="233dp"
         android:text="Onibus1:"
         android:textColor="@android:color/black"
         android:textSize="18sp" />
@@ -102,8 +109,9 @@
         android:id="@+id/onibus2TextID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="300dp"
+        android:layout_marginBottom="194dp"
         android:text="Onibus2:"
         android:textColor="@android:color/black"
         android:textSize="18sp" />
@@ -116,6 +124,14 @@
         android:layout_alignParentStart="true"
         android:src="@color/roxo"
         android:layout_alignParentLeft="true" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo" />
 
 </RelativeLayout>
 
