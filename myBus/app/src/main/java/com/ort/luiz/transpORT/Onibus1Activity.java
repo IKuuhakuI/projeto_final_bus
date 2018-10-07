@@ -59,7 +59,7 @@ public class Onibus1Activity extends Activity {
             //Abre a pagina inicial
             startActivity(new Intent(this, SelectOnibusActivity.class));
             btnVoltar.setBackgroundResource(R.color.aqua);
-            finish();
+
         });
 
         //Botao ver rota
@@ -68,7 +68,7 @@ public class Onibus1Activity extends Activity {
             //Abre a activity da rota do ônibus 1
             startActivity(new Intent(this,RotaOnibus1Activity.class));
             btnVerRota.setBackgroundResource(R.color.aqua);
-            finish();
+
         });
 
         //Le o QR banco de dados

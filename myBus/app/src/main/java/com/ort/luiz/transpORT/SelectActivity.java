@@ -18,13 +18,13 @@ public class SelectActivity extends AppCompatActivity {
         btnOnibus.setOnClickListener(v->{
             startActivity(new Intent(this, SelectOnibusActivity.class));
             btnOnibus.setBackgroundResource(R.color.aqua);
-            finish();
+
         });
 
         btnRota.setOnClickListener(v -> {
             startActivity(new Intent(this, SelectRotaActivity.class));
             btnRota.setBackgroundResource(R.color.aqua);
-            finish();
+
         });
 
     }

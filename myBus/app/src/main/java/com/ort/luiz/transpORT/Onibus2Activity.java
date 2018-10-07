@@ -58,7 +58,6 @@ public class Onibus2Activity extends Activity {
         btnVoltar.setOnClickListener((V)->{
             startActivity(new Intent(this, SelectOnibusActivity.class));
             btnVoltar.setBackgroundResource(R.color.aqua);
-            finish();
         });
 
         btnVerRotaOnibus2 = findViewById(R.id.btnVerRotaOnibus2ID);
@@ -66,7 +65,7 @@ public class Onibus2Activity extends Activity {
         btnVerRotaOnibus2.setOnClickListener((V)->{
             startActivity(new Intent(this, RotaOnibus2Activity.class));
             btnVerRotaOnibus2.setBackgroundResource(R.color.aqua);
-            finish();
+
         });
 
         //Le do banco de dados

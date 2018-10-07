@@ -77,10 +77,9 @@ public class SelectOnibusActivity extends Activity {
             if(verificaConexao() == true) {
                 if (onibusSelected == "Onibus1") {
                     startActivity(new Intent(this, Onibus1Activity.class));
-                    finish();
+
                 } else if (onibusSelected == "Onibus2") {
                     startActivity(new Intent(this, Onibus2Activity.class));
-                    finish();
                 }
             } else{
                 alert("Não há conexão com a internet, por favor tente novamente");
@@ -89,8 +88,6 @@ public class SelectOnibusActivity extends Activity {
 
         btnVoltar.setOnClickListener(v -> {
             startActivity(new Intent(this, SelectActivity.class));
-            btnVoltar.setBackgroundResource(R.color.aqua);
-            finish();
         });
     }
 

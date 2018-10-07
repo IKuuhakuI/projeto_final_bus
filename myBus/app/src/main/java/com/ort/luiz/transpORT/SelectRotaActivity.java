@@ -200,7 +200,6 @@ public class SelectRotaActivity extends Activity {
         btnVoltar. setOnClickListener(v -> {
             startActivity(new Intent(this, SelectActivity.class));
             btnVoltar.setBackgroundResource(R.color.aqua);
-            finish();
         });
     }
 
