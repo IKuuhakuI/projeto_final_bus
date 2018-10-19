@@ -63,9 +63,12 @@ public class Onibus2Activity extends Activity {
         btnVerRotaOnibus2 = findViewById(R.id.btnVerRotaOnibus2ID);
         //Abre as rotas do ônibus 2
         btnVerRotaOnibus2.setOnClickListener((V)->{
-            startActivity(new Intent(this, RotaOnibus2Activity.class));
             btnVerRotaOnibus2.setBackgroundResource(R.color.aqua);
+            Intent intent = new Intent(this, RotaOnibus2Activity.class);
 
+            intent.putExtra("lastPage", "selectOnibus");
+
+            startActivity(intent);
         });
 
         //Le do banco de dados

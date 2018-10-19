@@ -190,12 +190,20 @@ public class SelectRotaActivity extends Activity {
 
         textOnibus1.setOnClickListener(v -> {
             //alert("Clicou");
-            startActivity(new Intent(this, RotaOnibus1Activity.class));
+            Intent intent = new Intent(SelectRotaActivity.this, RotaOnibus1Activity.class);
+
+            intent.putExtra("lastPage", "selectRota");
+
+            startActivity(intent);
         });
 
         textOnibus2.setOnClickListener(v -> {
             //alert(clicou);
-            startActivity(new Intent(this, RotaOnibus2Activity.class));
+            Intent intent = new Intent(SelectRotaActivity.this, RotaOnibus2Activity.class);
+
+            intent.putExtra("lastPage", "selectRota");
+
+            startActivity(intent);
         });
 
         btnVoltar. setOnClickListener(v -> {

@@ -56,19 +56,20 @@ public class Onibus1Activity extends Activity {
         //Botao voltar
         btnVoltar = findViewById(R.id.btnVoltarID);
         btnVoltar.setOnClickListener((V)->{
-            //Abre a pagina inicial
-            startActivity(new Intent(this, SelectOnibusActivity.class));
+                //Abre a pagina inicial
+                startActivity(new Intent(this, SelectOnibusActivity.class));
             btnVoltar.setBackgroundResource(R.color.aqua);
-
         });
 
         //Botao ver rota
         btnVerRota = findViewById(R.id.btnVerRotaOnibus1ID);
         btnVerRota.setOnClickListener((V)->{
-            //Abre a activity da rota do ônibus 1
-            startActivity(new Intent(this,RotaOnibus1Activity.class));
             btnVerRota.setBackgroundResource(R.color.aqua);
+            Intent intent = new Intent(this, RotaOnibus1Activity.class);
 
+            intent.putExtra("lastPage", "selectOnibus");
+
+            startActivity(intent);
         });
 
         //Le o QR banco de dados

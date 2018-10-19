@@ -15,12 +15,19 @@ public class RotaOnibus2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rota_onibus2);
 
+        Intent i = getIntent();
+
+        String lastPage = i.getStringExtra("lastPage");
+
         btnVoltar = findViewById(R.id.btnVoltarOnibus2ID);
 
         btnVoltar.setOnClickListener((V)->{
-            startActivity(new Intent(this, Onibus2Activity.class));
             btnVoltar.setBackgroundResource(R.color.aqua);
-
+            if(lastPage.equals("selectRota")){
+                startActivity(new Intent(this, SelectRotaActivity.class));
+            } else if(lastPage.equals("selectOnibus")) {
+                startActivity(new Intent(this, Onibus2Activity.class));
+            }
         });
     }
 }
